@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Book Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Personal Book Library</h1>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search books...">
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="science">Science</option>
+                    <option value="history">History</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <section class="add-book">
+                <h2>Add New Book</h2>
+                <form id="addBookForm">
+                    <input type="text" id="title" placeholder="Book Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <select id="category" required>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="science">Science</option>
+                        <option value="history">History</option>
+                    </select>
+                    <button type="submit">Add Book</button>
+                </form>
+            </section>
+
+            <section class="books-grid" id="booksGrid">
+                <!-- Books will be dynamically added here -->
+            </section>
+        </main>
+
+        <section class="borrowing-history" id="borrowingHistory">
+            <h2>Borrowing History</h2>
+            <div class="history-list">
+                <!-- Borrowing history will be dynamically added here -->
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
